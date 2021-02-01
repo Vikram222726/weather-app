@@ -1,38 +1,258 @@
-.App {
+#root,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.navText {
+  position: relative;
+  left: 440px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 38px;
+  color: #94b8b8;
+}
+
+.fullscreen {
+  height: 100%;
+}
+
+.setform {
+  position: relative;
+  left: 500px;
+  top: 20px;
+  width: 350px;
+}
+
+.container {
+  position: relative;
+  top: 50px;
+  height: 400px;
+}
+
+::placeholder {
+  font-size: 10px;
+}
+
+.stylebtn {
+  position: relative;
+  left: 340px;
+  top: 20px;
+}
+
+.content {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./images/coldweather.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: 0.4 ease-out;
+  background-repeat: no-repeat;
+  filter: blur(0.2px);
+}
+
+.content.warm {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./images/warm1.jpg");
+}
+
+.content.spring {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./images/spring.jpg");
+}
+
+.search-bar:focus {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.location-box {
+  color: aqua;
+}
+
+.weather-box {
+  color: aqua;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.location-box .location {
+  color: #fff;
+  font-size: 34px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.location-box .date {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  font-style: italic;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.weather-box .temp {
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 15px 25px;
+  color: #fff;
+  font-size: 52px;
+  font-weight: 900;
+  text-align: center;
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-.App-link {
-  color: #61dafb;
+.weather-box .weather {
+  position: relative;
+  top: -30px;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 600;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.containers {
+  position: relative;
+  top: 35px;
+  height: 270px;
+}
+
+.row {
+  height: 80px;
+}
+
+.container {
+  position: relative;
+  top: 60px;
+  height: 150px;
+}
+
+.col {
+  height: 140px;
+  position: relative;
+  top: -30px;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 15px 25px;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-align: center;
+}
+
+.nextReports {
+  background-color: azure;
+}
+
+.nxttemp {
+  position: relative;
+  height: 35px;
+  top: -10px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.nxtimg {
+  background-color: darkblue;
+  width: 80px;
+  height: 60px;
+  position: relative;
+  top: -5px;
+  border-radius: 16px;
+  left: 50px;
+}
+
+.nxtdate {
+  position: relative;
+  top: 3px;
+  color: #fff;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.mausam1 {
+  background-image: url("./images/sunny.png");
+  background-size: cover;
+  background-position: center;
+  transition: 0.4 ease-out;
+  background-repeat: no-repeat;
+}
+
+.mausam1.rainy {
+  background-image: url("./images/cloudy.jpg");
+}
+
+.mausam1.snow {
+  background-image: url("./images/snow.jpg");
+}
+
+.mausam2 {
+  background-image: url("./images/sunny.png");
+  background-size: cover;
+  background-position: center;
+  transition: 0.4 ease-out;
+  background-repeat: no-repeat;
+}
+
+.mausam2.rainy {
+  background-image: url("./images/cloudy.jpg");
+}
+
+.mausam2.snow {
+  background-image: url("./images/snow.jpg");
+}
+
+.mausam3 {
+  background-image: url("./images/sunny.png");
+  background-size: cover;
+  background-position: center;
+  transition: 0.4 ease-out;
+  background-repeat: no-repeat;
+}
+
+.mausam3.rainy {
+  background-image: url("./images/cloudy.jpg");
+}
+
+.mausam3.snow {
+  background-image: url("./images/snow.jpg");
+}
+
+.mausam4 {
+  background-image: url("./images/sunny.png");
+  background-size: cover;
+  background-position: center;
+  transition: 0.4 ease-out;
+  background-repeat: no-repeat;
+}
+
+.mausam4.rainy {
+  background-image: url("./images/cloudy.jpg");
+}
+
+.mausam4.snow {
+  background-image: url("./images/snow.jpg");
+}
+
+.mausam5 {
+  background-image: url("./images/sunny.png");
+  background-size: cover;
+  background-position: center;
+  transition: 0.4 ease-out;
+  background-repeat: no-repeat;
+}
+
+.mausam5.rainy {
+  background-image: url("./images/cloudy.jpg");
+}
+
+.mausam5.snow {
+  background-image: url("./images/snow.jpg");
 }
